@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ujima SACCO</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+}
+
+/* HEADER */
+header {
+    background: #0b3d91;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(to right, #0b3d91, #1e88e5);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 32px;
+}
+
+/* SECTIONS */
+.container {
+    padding: 30px;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+    min-width: 250px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* BUTTON */
+button {
+    background: #0b3d91;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* FOOTER */
+footer {
+    background: #0b3d91;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>Ujima SACCO</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Loans</a>
+        <a href="#">Savings</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<div class="hero">
+    <h2>Grow Your Future with Ujima SACCO</h2>
+    <p>Save. Borrow. Invest. Build your financial freedom today.</p>
+    <button onclick="join()">Join Now</button>
+</div>
+
+<div class="container">
+
+    <h2>Our Services</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>💰 Savings</h3>
+            <p>Save securely and earn dividends annually.</p>
+        </div>
+
+        <div class="card">
+            <h3>🏦 Loans</h3>
+            <p>Quick and affordable loans for members.</p>
+        </div>
+
+        <div class="card">
+            <h3>📈 Investments</h3>
+            <p>Grow your money through SACCO investments.</p>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="container">
+    <h2>Member Registration</h2>
+
+    <div class="card">
+        <input id="name" placeholder="Full Name" style="width:100%;padding:10px;margin:5px 0;">
+        <input id="email" placeholder="Email" style="width:100%;padding:10px;margin:5px 0;">
+        <button onclick="register()">Register</button>
+
+        <p id="msg"></p>
+    </div>
+</div>
+
+<footer>
+    © 2026 Ujima SACCO | All Rights Reserved
+</footer>
+
+<script>
+function join() {
+    alert("Welcome! Please fill the registration form below.");
+}
+
+function register() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+
+    if(name && email){
+        document.getElementById("msg").innerText =
+        "Thank you " + name + ", your membership request has been received!";
+    } else {
+        document.getElementById("msg").innerText =
+        "Please fill all fields.";
+    }
+}
+</script>
+
+</body>
+</html>
